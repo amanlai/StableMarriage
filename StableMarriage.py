@@ -1,3 +1,5 @@
+#from StableMarriage import MarriageModel
+
 import numpy as np
 
 class MarriageModel:
@@ -236,7 +238,6 @@ class MarriageModel:
         (Optional) key-word arguments: 
         print_rounds: If True, prints the number of steps it took to reach the final outcome.
         print_tentative_matchings: If True, prints all tentative matchings made after each step.
-        sort_by: 'proposers' or 'receivers'. Sorts the final outcome according to either the proposers or the receivers.
         
         Returns a dictionary where: 
         - For married couples: the keys correspond to the proposers and 
@@ -336,8 +337,7 @@ class MarriageModel:
             # if print_tentative_matchings argument is passed, print the tentative matching so far.
             if rejections_exist and kwargs.get('print_tentative_matchings') is True:
                 print('Tentative matching after Round {}:'.format(itr))
-                # sort_by either header or match
-                print(self.__sort_matching(mu, sort_by=kwargs.get('sort_by')))
+                print(mu)
 
             new_proposals = {}
             # iterate over every proposer who is rejected from their most recent proposal 
@@ -574,7 +574,7 @@ class MarriageModel:
                 if blocking_pair is True:
                     # if print_rounds is True then print the number of rounds it took to reach a stable matching
                     if kwargs.get('print_rounds') is True:
-                        print('The algorithm ran {} rounds.'.format(rounds))
+                        print('The algorithm ran {} rounds to reach a stable matching.'.format(rounds))
                     break
                 # if it returns a blocking pair
                 else:
