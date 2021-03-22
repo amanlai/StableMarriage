@@ -20,7 +20,7 @@ Gale-Shapley algorithm is a constructive way to find a stable matching. It works
 
 * **Step 1.** Each boy proposes to his first acceptable choice (if he has any names on his preference list). Each girl who receives an offer rejects all offers except the best acceptable proposal (according to her preference list), which she *holds* on to.
 
-* **Step $k$.** Any boy who was rejected at step $k − 1$ makes a new proposal to his most preferred girl on his list who has not yet rejected him. (If he ran through the names on his list, he makes no more proposals.) Each girl *holds* her most preferred acceptable proposal to date, and rejects the rest.
+* **Step *k*.** Any boy who was rejected at step *k − 1* makes a new proposal to his most preferred girl on his list who has not yet rejected him. (If he ran through the names on his list, he makes no more proposals.) Each girl *holds* her most preferred acceptable proposal to date, and rejects the rest.
 
 Algorithm terminates when there are no more rejections and each girl is matched with the boy she has been holding in the
 last step. Any girl who has not been holding an offer or any boy who was rejected by all acceptable girls remains single.
