@@ -1,5 +1,3 @@
-#from StableMarriage import MarriageModel
-
 import numpy as np
 
 class MarriageModel:
