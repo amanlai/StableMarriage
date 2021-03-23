@@ -2,15 +2,15 @@ import numpy as np
 
 class MarriageModel:
     
-    #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% HELPER FUNCTIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    
     def __init__(self, proposers, receivers):
         # initialize 
         self.proposers = proposers
         self.receivers = receivers
-    
+        
+    #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% HELPER FUNCTIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
         
     # checks if the algorithm should continue to run or not.
     # it returns False in two cases: (i) every proposer is matched to someone 
@@ -572,7 +572,8 @@ class MarriageModel:
                 if blocking_pair is True:
                     # if print_rounds is True then print the number of rounds it took to reach a stable matching
                     if kwargs.get('print_rounds') is True:
-                        print('The algorithm ran {} rounds to reach a stable matching.'.format(rounds))
+                        print('The algorithm ran {} rounds to reach the following stable matching:'.format(rounds))
+                        print(mu)
                     break
                 # if it returns a blocking pair
                 else:
@@ -624,7 +625,7 @@ class MarriageModel:
         
         # if there is only one matching, then return a list of tuples (i.e. a matching)
         if number_of_matchings is 1:
-            return (output[0],1)
+            return {match[0]:match[1] for match in output[0]}
         # but if there are multiple, return a list of list of tuples
         else:
-            return list(zip(self.support, self.frequencies))
+            return self.support, self.frequencies
