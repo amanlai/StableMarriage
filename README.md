@@ -44,3 +44,4 @@ Gale-Shapley algorithm implies a centralized authority who can match men and wom
 Roth and van de Vate (1990) answered this question in the affirmative. They proved that starting from any unstable matching, there exists a path to *a* stable matching. This result suggests that stable matchings are a natural converging point for two-sided matching problems. Note that we are not sure which stable matching will be reached in this decentralized setting, whereas in the Gale-Shapley algorithm, we are very certain which stable matching will be reached.
 
 
+[demo.txt](https://github.com/amanlai/StableMarriage/files/6191169/demo.txt)
