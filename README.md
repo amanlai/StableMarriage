@@ -39,6 +39,6 @@ last step. Any girl who has not been holding an offer or any boy who was rejecte
 
 Gale-Shapley algorithm implies a centralized authority who can match men and women by collecting their preference lists and using them to output a stable matching. 
 
-**Question:** Can a group of men and women reach a stable outcome if they do not in a decentralized way? In other words, if men and women date each other, break up, date another, break up, etc. out on their own, can they reach a stable matching eventually?
+**Question:** Can a group of men and women reach a stable outcome if they match up in a decentralized way? In other words, if men and women date each other, break up, date another, break up, etc. out on their own, can they reach a stable matching eventually?
 
-Roth and van de Vate (1990) answered this question in the affirmative. They proved that starting from any unstable matching, there exists a path to stability.
+Roth and van de Vate (1990) answered this question in the affirmative. They proved that starting from any unstable matching, there exists a path to *a* stable matching. This result suggests that stable matchings are a natural converging point for two-sided matching problems. Note that we are not sure which stable matching will be reached in this decentralized setting, whereas in the Gale-Shapley algorithm, we are very certain which stable matching will be reached.
