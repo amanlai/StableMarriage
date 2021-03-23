@@ -8,10 +8,10 @@ Gale and Shapley proved that if preferences are strict and no one has a person o
 ### The Problem
 
 * There are a certain number of boys and girls in a room.
-* Everyone has strict preferences over people from the opposite sex. So boys have a list of girls whom he wants to dance with ranking them from most desirable to less desirable and girls have a list of boys whom she wants to dance with ranking them from most desirable to least desirable. A girl is acceptable for a boy if she is on his preference list; similarly, a boy is acceptable for a girl if he is on her preference list.
+* Everyone has strict preferences over people from the opposite sex. So boys have a list of girls whom he wants to dance with, ranking them from most desirable to least desirable, and girls have a list of boys whom she wants to dance with, ranking them from most desirable to least desirable. A girl is acceptable for a boy if she is on his preference list; similarly, a boy is acceptable for a girl if he is on her preference list.
 * Everyone's preferences depend only on their own opinions; there is no jealousy (in economic terms, there are no *externalities*).
 * No one is forced to dance with anyone who is not on their preference list.
-* **A matching:** An outcome which tells everyone in the room what their dance arrangements are. Formally, a matching is a function that maps the set of boys and girls onto itself.
+* **A matching:** An outcome which tells everyone in the room who their dance partners are. Formally, a matching is a function that maps the set of boys and girls onto itself.
 * **Stability:** Suppose a matching has been made but there is a boy and a girl who want to dance with each other rather than dance with the person the matching matched them up with. Then they are said to form a *blocking pair.* A stable matching happens if there are no *blocking pairs.*
 
 ### Gale-Shapley algorithm
